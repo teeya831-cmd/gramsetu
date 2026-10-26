@@ -1,97 +1,63 @@
-# gramsetu
-A bilingual, mobile friendly platform for discovering government schemes, checking eligibility and benefits, and finding official sources.
 # GramSetu
 
-A bilingual, mobile-friendly platform for discovering government schemes, understanding eligibility and benefits, and visiting official sources.
+GramSetu is a bilingual, mobile-friendly platform designed to help people discover government schemes, understand eligibility requirements and benefits, and find official information sources.
 
-## Week 1 goal
+## Project Goal
 
-Build a React + Vite frontend MVP using sample JSON data. It should include a homepage, scheme listings and details, text search, category filters, a Hindi-English switch, responsive layouts, and verified official source links.
+Build a simple and accessible portal for Panchayat services and government scheme information.
 
-Voice search is optional and comes after text search works. Supabase is a Week 2 option only after the frontend is stable.
+## Planned Features
 
-## Planned project structure
+* Homepage with a clear introduction to GramSetu.
+* Government scheme listings and detail pages.
+* Text search and category filters.
+* Hindi and English language support.
+* Responsive design for mobile and desktop.
+* Links to verified official sources.
+* Optional voice search, after text search works reliably.
 
-Keep the Vite app at the repository root. Add these files as the team builds each feature.
+## Technology Stack
+
+* React
+* Vite
+* JavaScript
+* CSS
+* JSON for initial sample data
+
+Supabase may be introduced in Week 2 if the frontend is stable and a database is needed.
+
+## Project Structure
 
 ```text
 gramsetu/
-|-- public/
-|-- src/
-|   |-- assets/
-|   |-- components/
-|   |   |-- CategoryFilter.jsx
-|   |   |-- LanguageToggle.jsx
-|   |   |-- SchemeCard.jsx
-|   |   `-- SearchBar.jsx
-|   |-- data/
-|   |   `-- schemes.json
-|   |-- hooks/
-|   |   `-- useSchemeFilters.js
-|   |-- i18n/
-|   |   `-- translations.js
-|   |-- pages/
-|   |   |-- HomePage.jsx
-|   |   `-- SchemeDetailsPage.jsx
-|   |-- styles/
-|   |   `-- global.css
-|   |-- App.jsx
-|   `-- main.jsx
-|-- .gitignore
-|-- index.html
-|-- package.json
-|-- vite.config.js
-`-- README.md
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── i18n/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   ├── translations/
+│   ├── App.jsx
+│   └── main.jsx
+├── docs/
+├── tests/
+├── index.html
+├── package.json
+└── vite.config.js
 ```
 
-## Team responsibilities
+The structure may evolve as features are implemented.
 
-- **Member 1 — Teeya:** Lead the project, coordinate integration, and maintain the app shell and navigation.
-- **Member 2:** Prepare sample scheme data with official links; build scheme cards and detail views.
-- **Member 3:** Build text search and category filters.
-- **Member 4:** Build the Hindi-English switch, refine responsive layouts, and check source links.
+## Development Plan
 
-Coordinate before changing shared files. Keep scheme details linked to official sources.
+**Week 1:** Build and test the frontend using sample JSON data.
 
-## Run locally
+**Week 2:** Complete integration, improve accessibility, verify information sources, test the application, and deploy if possible.
 
-Once the Vite starter files are in the repo:
+## Important Note
 
-```bash
-npm install
-npm run dev
-```
-
-Before opening a pull request, create a production build:
-
-```bash
-npm run build
-```
-
-Vite's production build goes into `dist/`. See the [Vite guide](https://vite.dev/guide/).
-
-## Commit and review workflow
-
-1. Keep `main` ready to deploy. Do not commit directly to `main`.
-2. Create a branch for one task from the latest `main`. Examples: `feat/scheme-search`, `feat/hindi-toggle`, `fix/mobile-layout`.
-3. Make focused commits with clear messages, such as `feat: add scheme search` or `fix: improve mobile layout`.
-4. Push your branch to this repository and open a pull request into `main`.
-5. Ask a teammate to review the changes and check the preview deployment.
-6. Merge after review, then delete the branch.
-
-This follows [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow).
-
-## Deploy
-
-Use Vercel for the frontend:
-
-1. Import this GitHub repository into Vercel.
-2. Use the Vite settings: build command `npm run build`, output directory `dist`.
-3. Set `main` as the production branch.
-4. Check the preview link for a pull request before merging. Merging to `main` updates the production deployment.
-
-See [Vercel Git deployments](https://vercel.com/docs/git).
-
-## Keep secrets out of Git
-
-Do not commit passwords, tokens, or private keys. If Supabase is added in Week 2, keep real local values in `.env.local` and commit only a placeholder `.env.example`.
+GramSetu is an informational platform. Users should consult official government sources for authoritative scheme details and application procedures.

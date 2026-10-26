@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pm-kisan",
+    "categoryId": "agriculture",
+    "categoryEn": "Agriculture",
+    "categoryHi": "कृषि",
+    "titleEn": "PM-KISAN Samman Nidhi",
+    "titleHi": "पीएम-किसान सम्मान निधि",
+    "summaryEn": "A central programme for eligible farmer families. Check current eligibility, benefits, and status on the official portal.",
+    "summaryHi": "पात्र किसान परिवारों के लिए केंद्रीय कार्यक्रम। वर्तमान पात्रता, लाभ और स्थिति की जानकारी आधिकारिक पोर्टल पर देखें।",
+    "benefitEn": "Benefit information and payment status are available on the official PM-KISAN portal.",
+    "benefitHi": "लाभ और भुगतान की स्थिति की जानकारी आधिकारिक पीएम-किसान पोर्टल पर उपलब्ध है।",
+    "eligibilityEn": "Eligibility rules and exclusions can change. Confirm the current criteria on the official portal.",
+    "eligibilityHi": "पात्रता के नियम और अपवाद बदल सकते हैं। वर्तमान मानदंड आधिकारिक पोर्टल पर देखें।",
+    "officialUrl": "https://pmkisan.gov.in/"
+  },
+  {
+    "id": "national-scholarship-portal",
+    "categoryId": "education",
+    "categoryEn": "Education",
+    "categoryHi": "शिक्षा",
+    "titleEn": "National Scholarship Portal",
+    "titleHi": "राष्ट्रीय छात्रवृत्ति पोर्टल",
+    "summaryEn": "Explore scholarships listed on the national portal. Eligibility, benefits, and application dates depend on each scheme.",
+    "summaryHi": "राष्ट्रीय पोर्टल पर सूचीबद्ध छात्रवृत्तियाँ देखें। पात्रता, लाभ और आवेदन की तारीख हर योजना के अनुसार अलग होती है।",
+    "benefitEn": "The portal provides information and application access for listed scholarship schemes.",
+    "benefitHi": "इस पोर्टल पर सूचीबद्ध छात्रवृत्ति योजनाओं की जानकारी और आवेदन सुविधा उपलब्ध है।",
+    "eligibilityEn": "Check the eligibility criteria for each scholarship on the official portal before applying.",
+    "eligibilityHi": "आवेदन से पहले हर छात्रवृत्ति की पात्रता आधिकारिक पोर्टल पर देखें।",
+    "officialUrl": "https://scholarships.gov.in/All-Scholarships"
+  }
+]

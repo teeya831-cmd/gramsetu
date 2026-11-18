@@ -1,0 +1,57 @@
+[
+  {
+    "id": "birth-certificate",
+    "name": "Birth Certificate",
+    "nameHi": "जन्म प्रमाण पत्र",
+    "category": "certificates",
+    "description": "Information and guidance for obtaining a birth certificate.",
+    "descriptionHi": "जन्म प्रमाण पत्र प्राप्त करने की जानकारी और मार्गदर्शन।",
+    "requiredDocuments": ["Hospital birth record, where available", "Parent or guardian identity proof", "Address details"],
+    "applicationSteps": ["Contact your local Gram Panchayat or designated registration office.", "Confirm the applicable registration procedure.", "Submit the required information and supporting documents.", "Follow up with the responsible office."],
+    "officialSource": "https://crsorgi.gov.in/"
+  },
+  {
+    "id": "death-certificate",
+    "name": "Death Certificate",
+    "nameHi": "मृत्यु प्रमाण पत्र",
+    "category": "certificates",
+    "description": "Guidance about death registration and obtaining a death certificate.",
+    "descriptionHi": "मृत्यु पंजीकरण और मृत्यु प्रमाण पत्र प्राप्त करने की जानकारी।",
+    "requiredDocuments": ["Medical cause of death certificate, where applicable", "Identity proof of informant", "Available details of the deceased"],
+    "applicationSteps": ["Contact the local registrar or designated Panchayat office.", "Confirm the documents required for the case.", "Submit the death registration details.", "Collect or track the certificate through the responsible office."],
+    "officialSource": "https://crsorgi.gov.in/"
+  },
+  {
+    "id": "residence-guidance",
+    "name": "Residence Certificate Guidance",
+    "nameHi": "निवास प्रमाण पत्र संबंधी जानकारी",
+    "category": "certificates",
+    "description": "Guidance on finding the appropriate authority and procedure for a residence certificate.",
+    "descriptionHi": "निवास प्रमाण पत्र के लिए संबंधित कार्यालय और प्रक्रिया की जानकारी।",
+    "requiredDocuments": ["Identity proof", "Address proof", "Application form, as prescribed"],
+    "applicationSteps": ["Contact the local Tehsil or designated state service centre.", "Check the state-specific application requirements.", "Submit the application and supporting documents.", "Follow the application status through the responsible authority."],
+    "officialSource": "https://services.india.gov.in/"
+  },
+  {
+    "id": "water-supply",
+    "name": "Water Supply Information",
+    "nameHi": "जल आपूर्ति संबंधी जानकारी",
+    "category": "utilities",
+    "description": "Guidance for reporting local drinking water supply problems.",
+    "descriptionHi": "स्थानीय पेयजल आपूर्ति की समस्या दर्ज कराने की जानकारी।",
+    "requiredDocuments": ["Address or household details", "Description of the issue"],
+    "applicationSteps": ["Contact the Gram Panchayat office.", "Describe the location and nature of the water supply issue.", "Note any complaint reference provided.", "Follow up with the responsible local authority."],
+    "officialSource": "https://www.india.gov.in/"
+  },
+  {
+    "id": "sanitation",
+    "name": "Sanitation Services",
+    "nameHi": "स्वच्छता सेवाएँ",
+    "category": "public-services",
+    "description": "Information on local sanitation and waste-management services.",
+    "descriptionHi": "स्थानीय स्वच्छता और कचरा प्रबंधन सेवाओं की जानकारी।",
+    "requiredDocuments": ["Village and location details", "Description of the sanitation issue"],
+    "applicationSteps": ["Contact the Gram Panchayat office.", "Provide the location and details of the issue.", "Ask which local department handles the request.", "Follow up with the responsible authority."],
+    "officialSource": "https://swachhbharatmission.ddws.gov.in/"
+  }
+]

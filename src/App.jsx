@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ.jsx";
 import UserProfile from "./pages/UserProfile.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import AccountSettings from "./pages/AccountSettings.jsx";
+import Services from "./pages/Services.jsx";
 
 function PageFrame({ children }) {
   return <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: "easeOut" }}>{children}</motion.div>;
@@ -39,6 +40,7 @@ export default function App() {
             <Route path="/categories/:category" element={<CategoryPage />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/documents" element={<Documents />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/application-guide" element={<ApplicationGuide />} />
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />

@@ -61,29 +61,73 @@ export function searchSchemes(items, { query = "", category = "all", beneficiary
 }
 
 export function evaluateEligibility(items, answers) {
-  const enoughInfo = answers.ageRange && answers.occupation && answers.income && answers.region;
-  return items.map((scheme) => {
+  const results = items.map((scheme) => {
     const rules = scheme.eligibilityRules || {};
-    let score = 0;
-    let conflicts = 0;
     const checks = [];
+    const reasons = [];
+
     if (rules.occupations?.length) {
-      const matches = rules.occupations.includes(answers.occupation);
-      checks.push(matches); matches ? score += 2 : conflicts += 1;
+      const match = rules.occupations.includes(answers.occupation);
+      checks.push(match);
+      if (!match) reasons.push("Occupation does not match the listed criteria");
     }
+
     if (rules.incomes?.length) {
-      const matches = rules.incomes.includes(answers.income);
-      checks.push(matches); matches ? score += 1 : conflicts += 1;
+      const match = rules.incomes.includes(answers.income);
+      checks.push(match);
+      if (!match) reasons.push("Income category does not match");
     }
+
     if (rules.regions?.length && answers.region !== "any") {
-      const matches = rules.regions.includes(answers.region);
-      checks.push(matches); matches ? score += 1 : conflicts += 1;
+      const match = rules.regions.includes(answers.region);
+      checks.push(match);
+      if (!match) reasons.push("Region does not match");
     }
-    if (rules.student !== undefined) {
-      const matches = rules.student === (answers.occupation === "student");
-      checks.push(matches); matches ? score += 2 : conflicts += 1;
+
+    if (rules.minAge !== undefined || rules.maxAge !== undefined) {
+      const ageMap = {
+        under18: 17,
+        age18_25: 22,
+        age26_45: 35,
+        age46_60: 53,
+        over60: 65
+      };
+
+      const age = ageMap[answers.ageRange];
+      const match =
+        age !== undefined &&
+        (rules.minAge === undefined || age >= rules.minAge) &&
+        (rules.maxAge === undefined || age <= rules.maxAge);
+
+      checks.push(match);
+      if (!match) reasons.push("Age may not match the listed criteria");
     }
-    const status = !enoughInfo || conflicts === 0 && score > 0 ? (conflicts === 0 && score >= 2 ? "potential" : "possible") : "unlikely";
-    return { scheme, status, score, checks: checks.length, conflicts };
-  }).filter((result) => result.status !== "unlikely").sort((a, b) => b.score - a.score);
+
+    const matched = checks.filter(Boolean).length;
+    const total = checks.length;
+    const conflicts = total - matched;
+
+    let status = "insufficient";
+
+    if (total > 0 && conflicts === 0) {
+      status = "potential";
+    } else if (matched > 0) {
+      status = "possible";
+    } else if (total > 0) {
+      status = "unlikely";
+    }
+
+    return {
+      scheme,
+      status,
+      score: matched,
+      checks: total,
+      conflicts,
+      reasons
+    };
+  });
+
+  return results
+    .filter(result => result.status !== "unlikely")
+    .sort((a, b) => b.score - a.score);
 }
